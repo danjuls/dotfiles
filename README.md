@@ -1,15 +1,16 @@
 # Dotfiles Starter Pack
 
-## Innehåll
+## Contents
 
 - SketchyBar config
 - LazyVim config
 - WezTerm config
 - AeroSpace config
-- ZSH och Git
+- ZSH and Git
+- Starship
 
-## Användning
+## Usage
 
-1. Klona repot: `git clone ...`
-2. Kör `chmod +x install.sh`
-3. Kör `./install.sh` för att symlinka allt.
+1. Clone the repo: `git clone ...`
+2. Run `chmod +x install.sh`
+3. Run `./install.sh` to symlink everything.
