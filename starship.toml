@@ -37,12 +37,19 @@ symbol = "󰘬 "
 style = "fg:#2e3440 bg:#88c0d0"
 
 [git_commit]
+style = "fg:#2e3440 bg:#88c0d0"
 
 [git_state]
+style = "fg:#2e3440 bg:#88c0d0"
 
 [git_metrics]
+added_style = "fg:#2e3440 bg:#88c0d0"
+deleted_style = "fg:#2e3440 bg:#88c0d0"
+format = "[+$added]($added_style) [−$deleted]($deleted_style)"
 
 [git_status]
+style = "fg:#2e3440 bg:#88c0d0"
+format = "[$all_status]($style)"
 
 # LANGUAGES
 # =========
@@ -56,6 +63,22 @@ style = "fg:#2e3440 bg:#8fbcbb"
 symbol = '󰌠 '
 format = "[ $symbol($version )]($style)"
 style = "fg:#2e3440 bg:#8fbcbb"
+
+[nodejs]
+symbol = '󰎙 '
+format = "[ $symbol($version) ]($style)"
+style = "fg:#2e3440 bg:#8fbcbb"
+
+[package]
+format = "[ $symbol$version ]($style)"
+style = "fg:#2e3440 bg:#8fbcbb"
+symbol = "󰏗 "
+
+[php]
+format = "[ $symbol$version ]($style)"
+style = "fg:#2e3440 bg:#8fbcbb"
+symbol = " " # PHP-elefant
+
 
 # MISC
 # ====
