@@ -2,12 +2,13 @@
 
 ## Contents
 
-- SketchyBar config
-- LazyVim config
-- WezTerm config
-- AeroSpace config
+- [SketchyBar] (https://github.com/FelixKratz/SketchyBar)
+- [LazyVim] (https://www.lazyvim.org/)
+- [WezTerm] (https://wezterm.org/index.html)
+- [AeroSpace] (https://github.com/nikitabobko/AeroSpace)
+- [Jankyborders] (https://github.com/FelixKratz/JankyBorders)
+- [Starship] (https://starship.rs/)
 - ZSH and Git
-- Starship
 
 ## Usage
 
