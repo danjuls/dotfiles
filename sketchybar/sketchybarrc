@@ -33,15 +33,18 @@ bar=(
   topmost=window
 )
 
+# Set Nerd Font for icons
+ICON_FONT="Hack Nerd Font"
+export ICON_FONT
 
 # Setting up default values
 defaults=(
   updates=when_shown
-  icon.font="$FONT:Bold:14.0"
+  icon.font="$ICON_FONT:Bold:14.0"
   icon.color=$ICON_COLOR
   icon.padding_left=$PADDINGS
   icon.padding_right=$PADDINGS
-  label.font="$FONT:Semibold:13.0"
+  label.font="$ICON_FONT:Semibold:13.0"
   label.color=$LABEL_COLOR
   label.padding_left=$PADDINGS
   label.padding_right=$PADDINGS
