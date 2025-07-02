@@ -117,3 +117,4 @@ export PATH="$(composer config -g home)/vendor/bin:$PATH"
 export PATH="$HOME/.node/bin:$PATH"
 
 eval "$(starship init zsh)"
+alias skhd-reload='launchctl kickstart -k gui/$(id -u)/com.koekeishiya.skhd || (pkill skhd && skhd &)'
