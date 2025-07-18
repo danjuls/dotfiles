@@ -63,9 +63,18 @@ defaults=(
 
 sketchybar  --bar "${bar[@]}" --default "${defaults[@]}"
 
+
 # Left
 source "$ITEM_DIR/spaces.sh"
 source "$ITEM_DIR/yabai.sh"
+
+# Custom event for windows changing
+sketchybar --add event windows_changed
+
+# Dynamic Spaces item that runs space.py when triggered
+sketchybar --add item dynamic_spaces left \
+           --set dynamic_spaces script="$PLUGIN_DIR/space.py" \
+           --subscribe dynamic_spaces windows_changed
 
 # Right
 source "$ITEM_DIR/front_app.sh"

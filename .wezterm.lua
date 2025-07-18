@@ -1,5 +1,26 @@
 local wezterm = require("wezterm")
 
+wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+  local bg = "#81A1C1"
+  local fg = "#2E3440"
+  if not tab.is_active then
+    bg = "#3B4252"
+    fg = "#D8DEE9"
+  end
+
+  local title = tab.active_pane.title
+  local dir = wezterm.basename(tab.active_pane.current_working_dir)
+
+  return {
+    { Background = { Color = bg } },
+    { Foreground = { Color = fg } },
+    { Text = "  " .. dir .. " " },
+    { Background = { Color = "#2E3440" } },
+    { Foreground = { Color = bg } },
+    { Text = "" },
+  }
+end)
+
 return {
   font = wezterm.font("JetBrainsMono Nerd Font"),
   font_size = 13.0,

@@ -39,12 +39,12 @@ BATTERY_0=􀛪
 BATTERY_CHARGING=􀢋
 
 # Volume Icons
-VOLUME_100=􀊩
-VOLUME_66=􀊧
-VOLUME_33=􀊥
-VOLUME_10=􀊡
-VOLUME_0=􀊣
+VOLUME_100=""  # nf-fa-volume-up
+VOLUME_66=""   # nf-fa-volume-down
+VOLUME_33=""   # nf-fa-volume-down
+VOLUME_10=""   # nf-fa-volume-off
+VOLUME_0=""    # nf-fa-volume-off
 
 # WiFi
-WIFI_CONNECTED=􀙇
-WIFI_DISCONNECTED=􀙈
+WIFI_CONNECTED=""
+WIFI_DISCONNECTED="󰖪"

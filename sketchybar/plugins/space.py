@@ -16,6 +16,7 @@ ICON_MAP = [
     {"regex": r"ChatGPT", "icon": "󱘖"},
     {"regex": r"Safari|Firefox|Brave Browser|Vivaldi|LibreWolf|qutebrowser", "icon": ""},
     {"regex": r"Discord|Signal|Telegram|Messages", "icon": ""},
+    {"regex": r"Microsoft Teams|Teams", "icon": ""},
     {"regex": r"Default", "icon": ""}
 ]
 
@@ -39,7 +40,7 @@ def to_icon(app):
     for x in ICON_MAP:
         if re.search(x['regex'], app):
             return x['icon']
-    return ':default:'
+    return ''  # fallback Nerd Font glyph
 
 
 def to_formatted_icon(app, c):
@@ -52,11 +53,24 @@ def to_formatted_icons(apps):
 
 
 
+ # Cleanup: remove old dynamic space items and brackets
+for space_index in range(1, 20):
+    for index in range(1, 10):
+        os.system(f'sketchybar --remove space.{space_index}_{index}')
+    os.system(f'sketchybar --remove space.{space_index}_bracket')
+
+
+# Only count visible windows on each space
 spaces = {}
 apps = json.loads(os.popen('yabai -m query --windows').read())
 for app in apps:
-    spaces[app['space']] = spaces.get(app['space'], {})
-    spaces[app['space']][app['app']] = spaces[app['space']].get(app['app'], 0) + 1
+    space_index = app['space']
+    if space_index not in spaces:
+        spaces[space_index] = {}
+    # Only count apps if window is visible on that space
+    if app['is-visible']:
+        app_name = app['app']
+        spaces[space_index][app_name] = spaces[space_index].get(app_name, 0) + 1
 
 
 args = ''
