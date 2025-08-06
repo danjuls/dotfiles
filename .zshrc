@@ -107,6 +107,7 @@ export NVM_DIR="$HOME/.nvm"
 alias ds='./dev.sh'
 alias dcu='docker compose up -d'
 alias dcd='docker compose down'
+alias layout="~/dotfiles/yabai/switch_yabai_layout.sh"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
