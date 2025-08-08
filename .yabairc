@@ -83,4 +83,3 @@ yabai -m rule --add app="^Adobe Premiere Pro 2024$" role="AXLayoutArea" subrole=
 #yabai -m rule --add app="^Adobe Premiere Pro 2024$" manage=off
 
 yabai -m config layout bsp
-
